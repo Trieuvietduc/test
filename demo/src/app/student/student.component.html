@@ -1,0 +1,51 @@
+<p class="color-red font-weight">danh sách sinh viên</p>
+<!--  sử dụng cặp ngoặc nhọn tên biến đã định nghĩa  -->
+<!-- <p>{{title}}</p> -->
+<div class="container">
+  <form>
+    <div class="mb-4">
+      <label for="exampleInputEmail1" class="form-label">Tên</label>
+      <input type="text" class="form-control" id="name" aria-describedby="emailHelp" (input)="add($event,'name')" [value]="newUsers.name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Cân nặng</label>
+      <input type="text" class="form-control" id="cannag" (input)="add($event,'cannag')" [value]="newUsers.cannag">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Chiều cao</label>
+      <input type="text" class="form-control" id="chieucao" (input)="add($event,'chieucao')" [value]="newUsers.chieucao">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">ảnh</label>
+      <input type="text" class="form-control" id="anh" (input)="add($event,'anh')" [value]="newUsers.anh">
+    </div>
+    <button type="button" (click)="submit()" class="btn btn-primary" [disabled]="!onvalidate(newUsers)">Submit</button>
+  </form>
+</div>
+
+<div class="form-group container">
+  <label for="searchinput">search</label>
+  <input id="searchinput" type="text" class="form-control" placeholder="" (input)="onsearch($event)">
+  <p>{{array}}</p>
+</div>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <th>Tên</th>
+      <th>cân nặng</th>
+      <th>chiều cao</th>
+      <th>Ảnh</th>
+      <th>Hành động</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let users of arrayfill as array">
+        <td>{{users.name}}</td>
+        <td>{{users.cannag}}</td>
+        <td>{{users.chieucao}}</td>
+        <td><img [src]="users.anh" alt="" width="150px"></td>
+        <td><button class="btn btn-danger" (click)="remove(users.id)">Del</button>|
+        <button class="btn btn-danger" (click)="Edit(users)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
