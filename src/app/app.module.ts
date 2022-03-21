@@ -8,6 +8,10 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
+import { DetaiComponent } from './detai/detai.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+import {ProductService} from './services/product.service';
+import {HttpClientModule} from '@angular/common/http'
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
@@ -16,15 +20,18 @@ import { StudentComponent } from './student/student.component';
     AppComponent,
     LoginComponent,
     ProductComponent,
-    StudentComponent
+    StudentComponent,
+    DetaiComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule // import cho các component con sử dụng đc
+    FormsModule, // import cho các component con sử dụng đc
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -25,12 +25,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let newProduct of delProduct">
-                        <td>{{newProduct.name}}</td>
-                        <td>{{newProduct.price}}</td>
-                        <td>{{newProduct.desc}}</td>
-                        <td><button class="btn btn-primary" (click)="Edit(newProduct)">Edit</button>|
-                            <button class="btn btn-primary" (click)="Del(newProduct.id)">Del</button>
+                    <tr *ngFor="let product of product">
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.desc}}</td>
+                        <td><a [routerLink]="['/product', product.id,'edit']"><button class="btn btn-primary" (click)="Edit(newProduct)">Edit</button>|</a>
+
+                          <a href=""><button class="btn btn-primary" (click)="Del(newProduct.id)">Del</button>|</a>  
+
+                            <a [routerLink]="['/product', product.id]"><button class="btn btn-primary" >xem chi tiết</button></a>
                         </td>
                     </tr>
                 </tbody>

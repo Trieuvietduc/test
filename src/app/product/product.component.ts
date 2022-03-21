@@ -1,13 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProductService } from '../services/product.service';
+type PRODUCT_TYPE = {
+  id: number,
+  name: string,
+  desc: string, 
+  price: number
+}
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  constructor() { }
+  products: any;
+  constructor(private ps: ProductService) { }
   ngOnInit(): void {
+    this.ps.getproducts().subscribe(data=>{
+      this.product=data;
+      console.log(this.product);
+      
+      
+    })
   }
 
   // add 
@@ -78,4 +91,5 @@ export class ProductComponent implements OnInit {
     }
     return true;
   }
+  
 }
