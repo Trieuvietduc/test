@@ -1,0 +1,10 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name": "đức",
+            "price": 12223,
+            "desc": "apple apple"
+        }
+    ]
+}
