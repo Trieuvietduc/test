@@ -20,6 +20,7 @@ import { ProductComponent } from './admin/product/product.component';
 import { MainComponent } from './admin/main/main.component';
 import { HeaderComponent } from './admin/header/header.component';
 import { FooterComponent } from './admin/footer/footer.component';
+import { UserComponent } from './admin/user/user.component';
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
@@ -38,7 +39,8 @@ import { FooterComponent } from './admin/footer/footer.component';
     ProductComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
