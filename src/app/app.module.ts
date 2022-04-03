@@ -21,6 +21,7 @@ import { MainComponent } from './admin/main/main.component';
 import { HeaderComponent } from './admin/header/header.component';
 import { FooterComponent } from './admin/footer/footer.component';
 import { UserComponent } from './admin/user/user.component';
+import { DetailComponent } from './client/detail/detail.component';
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
@@ -40,7 +41,8 @@ import { UserComponent } from './admin/user/user.component';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    UserComponent
+    UserComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
