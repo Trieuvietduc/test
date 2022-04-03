@@ -4,25 +4,41 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import { ProductComponent } from './product/product.component';
-import { StudentComponent } from './student/student.component';
-import { DetaiComponent } from './detai/detai.component';
-import { ProductFormComponent } from './product-form/product-form.component';
 import {ProductService} from './services/product.service';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LayoutComponent } from './layout/layout.component';
+import { ClientComponent } from './client/client.component';
+import { AdminComponent } from './admin/admin.component';
+import { AsideComponent } from './admin/aside/aside.component';
+import { ClientHeaderComponent } from './client/client-header/client-header.component';
+import { ClientMainComponent } from './client/client-main/client-main.component';
+import { ClientFooterComponent } from './client/client-footer/client-footer.component';
+import { GioiThieuComponent } from './client/gioi-thieu/gioi-thieu.component';
+import { ContentComponent } from './client/gioi-thieu/content/content.component';
+import { ProductComponent } from './admin/product/product.component';
+import { MainComponent } from './admin/main/main.component';
+import { HeaderComponent } from './admin/header/header.component';
+import { FooterComponent } from './admin/footer/footer.component';
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    LayoutComponent,
+    ClientComponent,
+    AdminComponent,
+    AsideComponent,
+    ClientHeaderComponent,
+    ClientMainComponent,
+    ClientFooterComponent,
+    GioiThieuComponent,
+    ContentComponent,
     ProductComponent,
-    StudentComponent,
-    DetaiComponent,
-    ProductFormComponent
+    HeaderComponent,
+    MainComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
