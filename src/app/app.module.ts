@@ -21,7 +21,11 @@ import { MainComponent } from './admin/main/main.component';
 import { HeaderComponent } from './admin/header/header.component';
 import { FooterComponent } from './admin/footer/footer.component';
 import { UserComponent } from './admin/user/user.component';
-import { DetailComponent } from './client/detail/detail.component';
+import { ClientProductComponent } from './client/client-product/client-product.component';
+import { DetailComponent } from './client/client-product/detail/detail.component';
+import { AddComponent } from './admin/product/add/add.component';
+import { EditComponent } from './admin/product/edit/edit.component';
+import { ListComponent } from './admin/product/list/list.component';
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
@@ -42,7 +46,11 @@ import { DetailComponent } from './client/detail/detail.component';
     MainComponent,
     FooterComponent,
     UserComponent,
-    DetailComponent
+    ClientProductComponent,
+    DetailComponent,
+    AddComponent,
+    EditComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

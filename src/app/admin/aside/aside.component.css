@@ -9,7 +9,7 @@ strong {
 }
 
 .page {
-  height: 100vh;
+  height: auto;
   background: #fdfdfd;
   font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 600;
@@ -32,9 +32,11 @@ header {
 
 main {
   padding: 70px 20px 0;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   height: 100%;
+  width: 80%;
+  margin-left: 120px
 }
 
 main>div {
