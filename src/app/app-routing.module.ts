@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AddComponent } from './admin/product/add/add.component';
+import { EditComponent } from './admin/product/edit/edit.component';
+import { ListComponent } from './admin/product/list/list.component';
 import { ProductComponent } from './admin/product/product.component';
 import { UserComponent } from './admin/user/user.component';
 import { ClientProductComponent } from './client/client-product/client-product.component';
@@ -16,20 +18,12 @@ const routes: Routes = [
     component: ClientComponent,
   },
   {
-    path: 'product',
+    path: 'phone',
     component: ClientProductComponent
   },
   {
     path: 'product/detail',
     component: DetailComponent
-  },
-  {
-    path: 'gioi-thieu',
-    component: GioiThieuComponent,
-  },
-  {
-    path: 'gioi-thieu/content',
-    component: ContentComponent,
   },
   {
     path: 'admin',
@@ -48,9 +42,16 @@ const routes: Routes = [
             path: 'add',
             component: AddComponent,
           },
+          {
+            path: 'edit',
+            component: EditComponent,
+          },
+          {
+            path: 'xoa',
+            component: ProductComponent,
+          }
         ]
       },
-      
       {
         path: 'user',
         component: UserComponent
