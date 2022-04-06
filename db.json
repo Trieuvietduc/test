@@ -1,28 +1,52 @@
 {
-    "products":[
-        {
-            "id": 1,
-            "name": "iphone 13 pro max",
-            "desc": "apple",
-            "price": 12223,
-            "avartar": "https://vnn-imgs-f.vgcloud.vn/2019/05/09/15/hinh-anh-moi-nhat-ve-iphone-xr-2019-gia-re-1.jpg",
-            "status": 0
-        },
-        {
-            "id": 2,
-            "name": "redmi 5g",
-            "desc": "redmi",
-            "price": 12223,
-            "avartar": "https://img.websosanh.vn/v2/users/review/images/g0uimocg53p63.jpg?compress=85",
-            "status": 1
-        },
-        {
-            "id": 3,
-            "name": "vivo 10k",
-            "desc": "vivo",
-            "price": 12223,
-            "avartar": "https://phuongtung.vn/pt/images/detailed/24/xiaomi-poco-x3-pro-vang.jpg",
-            "status": 1
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "iphone 13 pro max",
+      "desc": "apple",
+      "price": 12223,
+      "avartar": "https://vnn-imgs-f.vgcloud.vn/2019/05/09/15/hinh-anh-moi-nhat-ve-iphone-xr-2019-gia-re-1.jpg",
+      "status": 0
+    },
+    {
+      "id": 2,
+      "name": "redmi 5g",
+      "desc": "redmi",
+      "price": 12223,
+      "avartar": "https://img.websosanh.vn/v2/users/review/images/g0uimocg53p63.jpg?compress=85",
+      "status": 1
+    },
+    {
+      "id": 3,
+      "name": "vivo 10k",
+      "desc": "vivo",
+      "price": 12223,
+      "avartar": "https://phuongtung.vn/pt/images/detailed/24/xiaomi-poco-x3-pro-vang.jpg",
+      "status": 1
+    },
+    {
+      "name": "fffff",
+      "desc": "fffff",
+      "price": "0qweqw",
+      "avartar": "4534",
+      "status": "1",
+      "id": 4
+    },
+    {
+      "name": "",
+      "desc": "",
+      "price": 0,
+      "avartar": "",
+      "status": 0,
+      "id": 5
+    },
+    {
+      "name": "",
+      "desc": "",
+      "price": 0,
+      "avartar": "",
+      "status": 0,
+      "id": 6
+    }
+  ]
 }

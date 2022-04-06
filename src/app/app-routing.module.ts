@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddComponent } from './admin/add/add.component';
 import { AdminComponent } from './admin/admin.component';
-import { AddComponent } from './admin/product/add/add.component';
 import { EditComponent } from './admin/product/edit/edit.component';
 import { ListComponent } from './admin/product/list/list.component';
 import { ProductComponent } from './admin/product/product.component';
@@ -29,19 +29,15 @@ const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     children: [
-      {
-        path: '',
-        redirectTo: 'phone',
-        pathMatch: 'full'
-      },
+      // {
+      //   path: '',
+      //   redirectTo: 'phone',
+      //   pathMatch: 'full'
+      // },
       {
         path: 'phone',
         component: ProductComponent,
         children: [
-          {
-            path: 'add',
-            component: AddComponent,
-          },
           {
             path: 'edit',
             component: EditComponent,
@@ -51,6 +47,10 @@ const routes: Routes = [
             component: ProductComponent,
           }
         ]
+      },
+      {
+        path: 'add',
+        component: AddComponent,
       },
       {
         path: 'user',

@@ -23,9 +23,10 @@ import { FooterComponent } from './admin/footer/footer.component';
 import { UserComponent } from './admin/user/user.component';
 import { ClientProductComponent } from './client/client-product/client-product.component';
 import { DetailComponent } from './client/client-product/detail/detail.component';
-import { AddComponent } from './admin/product/add/add.component';
+
 import { EditComponent } from './admin/product/edit/edit.component';
 import { ListComponent } from './admin/product/list/list.component';
+import { AddComponent } from './admin/add/add.component';
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
@@ -48,8 +49,8 @@ import { ListComponent } from './admin/product/list/list.component';
     UserComponent,
     ClientProductComponent,
     DetailComponent,
-    AddComponent,
     EditComponent,
+    AddComponent,
     ListComponent
   ],
   imports: [
