@@ -1,14 +1,17 @@
 <div class="container">
     <form action="" class="form" #productForm="ngForm" (submit)="onsubmit(productForm.value)">
-        <input type="hidden" >
+       
         <label for="">Name</label>
         <input type="text" class="form-control" [(ngModel)]="array.name" placeholder="Name" name="name" #name="ngModel">
+        <label for="">Thương Hiệu</label>
+        <input type="text" class="form-control" [(ngModel)]="array.thuong_hieu" placeholder="thuong_hieu" name="thuong_hieu" #thuong_hieu="ngModel">
         <label for="">Mô Tả</label>
         <input type="text" class="form-control" [(ngModel)]="array.desc" placeholder="Mô Tả" name="desc" #desc="ngModel">
         <label for="">Giá</label>
         <input type="text" class="form-control" [(ngModel)]="array.price" placeholder="Giá" name="price" #price="ngModel">
         <label for="">Avartar</label>
-        <input type="text" class="form-control" [(ngModel)]="array.avartar" placeholder="Avartar" name="avartar" #avartar="ngModel">
+        <!-- <input type="text" class="form-control" [(ngModel)]="array.avartar" placeholder="Avartar" name="avartar" #avartar="ngModel"> -->
+        <input type="file" class="form-control" (change)="changeImage($event)">
         <label for="">Trạng Thái</label>
         <select class="form-control" name="status" id="" [(ngModel)]="array.status" #status="ngModel">
             <option value="1">Is Active</option>

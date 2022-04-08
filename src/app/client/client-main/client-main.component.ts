@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-client-main',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-main.component.css']
 })
 export class ClientMainComponent implements OnInit {
-
-  constructor() { }
+  List: any
+  constructor(private phone: ProductService) { }
 
   ngOnInit(): void {
+    this.getList();
   }
-
+  getList(){
+    this.phone.getProducts().subscribe(data=>{
+      this.List = data
+    }) 
+  }
 }

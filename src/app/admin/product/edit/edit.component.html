@@ -1,18 +1,23 @@
+
 <div class="container">
-    <form action="" class="form">
+    <form action="" class="form" #productForm="ngForm" (ngSubmit)="onUpdate(productForm.value)">
         <label for="">Name</label>
-        <input type="text" class="form-control" value="iphone 13">
+        <input type="text" class="form-control" name="name" [(ngModel)]="firstproduct.name" #name="ngModel">
+        <label for="">Thương Hiệu</label>
+        <input type="text" class="form-control" name="thuong_hieu" [(ngModel)]="firstproduct.thuong_hieu" #thuong_hieu="ngModel">
         <label for="">Mô Tả</label>
-        <input type="text" class="form-control" value="iphone 13">
+        <input type="text" class="form-control" name="desc" [(ngModel)]="firstproduct.desc" #desc="ngModel">
         <label for="">Giá</label>
-        <input type="text" class="form-control" value="iphone 13">
+        <input type="text" class="form-control" name="price" [(ngModel)]="firstproduct.price" #price="ngModel">
         <label for="">Avartar</label>
-        <input type="text" class="form-control" value="iphone 13">
+        <input type="file" class="form-control" name="avartar" [(ngModel)]="firstproduct.avartar" #avartar="ngModel" (change)="changeImage($event)">
+        <img [src]="firstproduct.avartar" alt="" width="200px">
+        <img [src]="imageBase64" alt="" width="200px">
         <label for="">Trạng Thái</label>
-        <select class="form-control" name="" id="">
+        <select class="form-control" name="status" id="" [(ngModel)]="firstproduct.status" #status="ngModel">
             <option value="1">Is Active</option>
             <option value="0">Active</option>
         </select><br>
-        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-success">Edit</button>
     </form>
 </div>

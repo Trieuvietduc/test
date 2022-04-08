@@ -17,4 +17,9 @@ export class ListComponent implements OnInit {
       this.list = data;
     })
   }
+  del(id: number){
+    this.phone.deleteProduct(id).subscribe(data => {
+      this.getlist();
+    });
+  }
 }

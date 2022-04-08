@@ -22,7 +22,7 @@ const routes: Routes = [
     component: ClientProductComponent
   },
   {
-    path: 'product/detail',
+    path: 'phone/:id/detail',
     component: DetailComponent
   },
   {
@@ -39,7 +39,7 @@ const routes: Routes = [
         component: ProductComponent,
         children: [
           {
-            path: 'edit',
+            path: ':id/edit',
             component: EditComponent,
           },
           {
