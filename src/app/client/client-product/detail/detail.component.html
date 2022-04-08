@@ -9,7 +9,7 @@
                             <img [src]="array.avartar" alt="" width="300px">
                             <div class="row title">
                                 <div class="col">
-                                    <h4>Tên Sản Phẩm: {{array.name}}</h4>
+                                    <h4>{{array.name}}</h4>
                                 </div>
                                 <div class="col text-right"><a href="#"><i class="fa fa-heart-o"></i></a></div>
                             </div>
@@ -22,7 +22,7 @@
                     </div>
                     <div class="row lower">
                         <div class="col"><a routerLink="../../../phone"><button class="btn btn-success">Cancel</button></a></div>
-                        <div class="col text-right align-self-center"> <button class="btn">Add to cart</button> </div>
+                        <div class="col text-right align-self-center"><button class="btn"><a [routerLink]="'admin'"> Add to cart</a></button></div>
                     </div>
                 </div>
             </div>

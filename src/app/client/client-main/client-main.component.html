@@ -3,15 +3,21 @@
         <div class="mt-2 col-md-4" *ngFor="let product of List">
             <div class="card">
                 <div class="card-body">
-                    <div class="card-img-actions"> <img [src]="product.avartar" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+                    <div class="card-img-actions"> <img [src]="product.avartar" class="card-img img-fluid" width="96"
+                            height="350" alt=""> </div>
                 </div>
                 <div class="card-body bg-light text-center">
                     <div class="mb-2">
-                        <h6 class="font-weight-semibold mb-2"> <a [routerLink]="[product.id, 'detail']" class="text-default mb-2" data-abc="true">{{product.name}}</a> </h6> <a href="#" class="text-muted" data-abc="true">{{product.desc}}</a>
+                        <h6 class="font-weight-semibold mb-2"> <a [routerLink]="[product.id, 'detail']"
+                                class="text-default mb-2" data-abc="true">{{product.name}}</a> </h6> <a href="#"
+                            class="text-muted" data-abc="true"><span class="fw-bolder font-monospace"
+                                style="color: rgb(226, 51, 21);">Thương Hiệu: </span>{{product.thuong_hieu}}</a>
                     </div>
                     <h3 class="mb-0 font-weight-semibold">{{product.price}}đ</h3>
-                    <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
-                    <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+                    <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i
+                            class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                    <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i><a style="color: #fff"
+                            routerLink="/admin">Add to cart</a></button>
                 </div>
             </div>
         </div>
