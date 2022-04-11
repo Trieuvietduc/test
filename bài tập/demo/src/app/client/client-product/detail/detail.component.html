@@ -1,0 +1,34 @@
+<app-client-header></app-client-header>
+<div class="container">
+    <div id="demo" class="carousel slide" data-ride="carousel" >
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-6 info">
+                            <img [src]="array.avartar" alt="" width="300px">
+                            <div class="row title">
+                                <div class="col">
+                                    <h4>{{array.name}}</h4>
+                                </div>
+                                <div class="col text-right"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+                            </div>
+                            <p style="color: red;">Giá: {{array.price}}đ</p>
+                            <span>
+                                Thông tin sản phẩm <br>
+                                {{array.desc}}.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row lower">
+                        <div class="col"><a routerLink="../../../phone"><button class="btn btn-success">Cancel</button></a></div>
+                        <div class="col text-right align-self-center"><button *ngIf="array.status==1" class="btn"><a [routerLink]="'admin'">Giỏ Hàng</a></button>
+                            <button *ngIf="array.status==0" class="btn" style="color: red;">Hết Hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-client-footer></app-client-footer>

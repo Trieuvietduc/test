@@ -1,0 +1,24 @@
+{{edit.value | json}}
+<div class="container">
+    <form action="" class="form" [formGroup]="edit">
+        <label for="">Name</label>
+        <input type="text" class="form-control"  formControlName="name" [(ngModel)]="firstproduct.name">
+        <label for="">Thương Hiệu</label>
+        <input type="text" class="form-control"  formControlName="thuong_hieu" [(ngModel)]="firstproduct.thuong_hieu">
+        <label for="">Mô Tả</label>
+        <input type="text" class="form-control" formControlName="desc" [(ngModel)]="firstproduct.desc">
+        <label for="">Giá</label>
+        <input type="text" class="form-control"  formControlName="price" [(ngModel)]="firstproduct.price">
+        <label for="">Avartar</label>
+        <input type="hidden" (change)="beforeImg($event)">
+        <input type="file" class="form-control"  formControlName="avartar" (change)="changeImage($event)" [(ngModel)]="firstproduct.avartar">
+        <!-- <img [src]="firstproduct.avartar" alt="" width="200px"> -->
+        <img [src]="imageBase64" alt="" width="200px"><br>
+        <label for="">Trạng Thái</label>
+        <select class="form-control"  id="" formControlName="status" [(ngModel)]="firstproduct.status">
+            <option value="1">Còn Hàng</option>
+            <option value="0">Hết Hàng</option>
+        </select><br>
+        <button class="btn btn-success" (click)="onUpdate(edit.value)">Edit</button>
+    </form>
+</div>

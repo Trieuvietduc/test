@@ -1,30 +1,63 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product/product.component';
-import { AppComponent } from './app.component';
-import { StudentComponent } from './student/student.component';
-import { DetaiComponent} from './detai/detai.component';
-import {ProductFormComponent} from './product-form/product-form.component'
+import { AddComponent } from './admin/add/add.component';
+import { AdminComponent } from './admin/admin.component';
+import { EditComponent } from './admin/product/edit/edit.component';
+import { ListComponent } from './admin/product/list/list.component';
+import { ProductComponent } from './admin/product/product.component';
+import { UserComponent } from './admin/user/user.component';
+import { ClientProductComponent } from './client/client-product/client-product.component';
+import { DetailComponent } from './client/client-product/detail/detail.component';
+import { ClientComponent } from './client/client.component';
+import { ContentComponent } from './client/gioi-thieu/content/content.component';
+import { GioiThieuComponent } from './client/gioi-thieu/gioi-thieu.component';
+
 const routes: Routes = [
   {
-    path: 'product',
-    component: ProductComponent
+    path: '',
+    component: ClientComponent,
   },
   {
-    path: 'product/:id',
-    component: DetaiComponent
+    path: 'phone',
+    component: ClientProductComponent
   },
   {
-    path: 'product/:id/edit',
-    component: ProductFormComponent
+    path: 'phone/:id/detail',
+    component: DetailComponent
   },
   {
-    path: 'app',
-    component:AppComponent
-  },
-  {
-    path: 'student',
-    component:StudentComponent
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      // {
+      //   path: '',
+      //   redirectTo: 'phone',
+      //   pathMatch: 'full'
+      // },
+      {
+        path: 'phone',
+        component: ProductComponent,
+        children: [
+          
+          {
+            path: 'xoa',
+            component: ProductComponent,
+          }
+        ]
+      },
+      {
+        path: 'phone/:id/edit',
+        component: EditComponent,
+      },
+      {
+        path: 'add',
+        component: AddComponent,
+      },
+      {
+        path: 'user',
+        component: UserComponent
+      }
+    ]
   }
 
 ];
