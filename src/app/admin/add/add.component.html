@@ -1,22 +1,33 @@
+<!-- <p>{{validateForm.value | json}}</p> -->
 <div class="container">
-    <form action="" class="form" #productForm="ngForm" (submit)="onsubmit(productForm.value)">
-       
+    <form action="" class="form" method="post" [formGroup]="validateForm">
         <label for="">Name</label>
-        <input type="text" class="form-control" [(ngModel)]="array.name" placeholder="Name" name="name" #name="ngModel">
+        <input type="text" class="form-control" formControlName="name" placeholder="Họ Và Tên">
+        <app-validate [form]="validateForm.get('name')" name="userName">
+        </app-validate>
         <label for="">Thương Hiệu</label>
-        <input type="text" class="form-control" [(ngModel)]="array.thuong_hieu" placeholder="thuong_hieu" name="thuong_hieu" #thuong_hieu="ngModel">
+        <input type="text" class="form-control" placeholder="thuong_hieu" formControlName="thuong_hieu">
+        <app-validate [form]="validateForm.get('thuong_hieu')" item="Thương hiệu">
+        </app-validate>
         <label for="">Mô Tả</label>
-        <input type="text" class="form-control" [(ngModel)]="array.desc" placeholder="Mô Tả" name="desc" #desc="ngModel">
+        <input type="text" class="form-control" placeholder="Mô Tả" formControlName="desc">
+        <app-validate [form]="validateForm.get('desc')" desc="Mô Tả">
+        </app-validate>
         <label for="">Giá</label>
-        <input type="text" class="form-control" [(ngModel)]="array.price" placeholder="Giá" name="price" #price="ngModel">
+        <input type="text" class="form-control" placeholder="Giá" formControlName="price">
+        <!-- <app-validate [form]="validateForm.get('price')" price="Giá Tiền">
+        </app-validate> -->
         <label for="">Avartar</label>
-        <!-- <input type="text" class="form-control" [(ngModel)]="array.avartar" placeholder="Avartar" name="avartar" #avartar="ngModel"> -->
         <input type="file" class="form-control" (change)="changeImage($event)">
+        <img [src]="imageBase64" alt="" width="200px">
         <label for="">Trạng Thái</label>
-        <select class="form-control" name="status" id="" [(ngModel)]="array.status" #status="ngModel">
-            <option value="1">Is Active</option>
-            <option value="0">Active</option>
+        <select class="form-control" formControlName="status">
+            <option value="">Chọn Trạng Thái</option>
+            <option value="1">Còn Hàng</option>
+            <option value="0">Hết Hàng</option>
         </select><br>
-        <button class="btn btn-success">Submit</button>
+        <!-- <app-validate [form]="validateForm.get('status')" status="Trạng Thái">
+        </app-validate> -->
+        <button class="btn btn-success" (click)="onsubmit(validateForm.value)">Submit</button>
     </form>
 </div>

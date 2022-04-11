@@ -31,14 +31,20 @@ export class EditComponent implements OnInit {
     reader.readAsDataURL(event.target.files[0]);
   }
   onUpdate(obj: any) {
-    console.log(obj);
-    obj ={
-      ...obj,
-      avartar: this.imageBase64
+    console.log(obj.avartar);
+    if (obj.avartar !== false) {
+      obj = {
+        ...obj,
+        avartar: obj.avartar
+      }
+    } else {
+      obj = {
+        ...obj,
+        avartar: this.imageBase64
+      }
     }
-    this.phone.updatePhone(this.id, obj).subscribe()
-    this.router.navigate(['/admin/phone']);
-    console.log(this.list);
-
+    console.log(obj);
+    // this.phone.updatePhone(this.id, obj).subscribe()
+    // this.router.navigate(['/admin/phone']);
   }
 }

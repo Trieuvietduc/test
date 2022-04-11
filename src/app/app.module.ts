@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ProductService} from './services/product.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LayoutComponent } from './layout/layout.component';
@@ -27,6 +27,8 @@ import { DetailComponent } from './client/client-product/detail/detail.component
 import { EditComponent } from './admin/product/edit/edit.component';
 import { ListComponent } from './admin/product/list/list.component';
 import { AddComponent } from './admin/add/add.component';
+import { StatusComponent } from './components/status/status.component';
+import { ValidateComponent } from './components/validate/validate.component';
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
@@ -51,7 +53,9 @@ import { AddComponent } from './admin/add/add.component';
     DetailComponent,
     EditComponent,
     AddComponent,
-    ListComponent
+    ListComponent,
+    StatusComponent,
+    ValidateComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +63,7 @@ import { AddComponent } from './admin/add/add.component';
     NgbModule,
     FormsModule, // import cho các component con sử dụng đc
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

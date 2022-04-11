@@ -22,7 +22,9 @@
                     </div>
                     <div class="row lower">
                         <div class="col"><a routerLink="../../../phone"><button class="btn btn-success">Cancel</button></a></div>
-                        <div class="col text-right align-self-center"><button class="btn"><a [routerLink]="'admin'"> Add to cart</a></button></div>
+                        <div class="col text-right align-self-center"><button *ngIf="array.status==1" class="btn"><a [routerLink]="'admin'">Giỏ Hàng</a></button>
+                            <button *ngIf="array.status==0" class="btn" style="color: red;">Hết Hàng</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -12,11 +12,11 @@
         <label for="">Avartar</label>
         <input type="file" class="form-control" name="avartar" [(ngModel)]="firstproduct.avartar" #avartar="ngModel" (change)="changeImage($event)">
         <img [src]="firstproduct.avartar" alt="" width="200px">
-        <img [src]="imageBase64" alt="" width="200px">
+        <img [src]="imageBase64" alt="" width="200px"><br>
         <label for="">Trạng Thái</label>
         <select class="form-control" name="status" id="" [(ngModel)]="firstproduct.status" #status="ngModel">
-            <option value="1">Is Active</option>
-            <option value="0">Active</option>
+            <option value="1">Còn Hàng</option>
+            <option value="0">Hết Hàng</option>
         </select><br>
         <button class="btn btn-success">Edit</button>
     </form>
