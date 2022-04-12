@@ -13,7 +13,6 @@ export class StatusComponent implements OnInit {
     this.status = 0;
     this.changeStatus = new EventEmitter();
   }
-
   ngOnInit(): void {
   }
   onChangeStatus(newStatus: number) {

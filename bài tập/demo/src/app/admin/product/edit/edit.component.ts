@@ -35,6 +35,11 @@ export class EditComponent implements OnInit {
   beforeImg(event: any){
     this.imageBase64 = event
   }
+  oneGit(){
+    this.phone.getProducts().subscribe(data=>{
+        this.list = data
+    })
+  }
   changeImage(event: any) {
     // 1. Định nghĩa việc đọc file
     const reader = new FileReader();
@@ -52,6 +57,9 @@ export class EditComponent implements OnInit {
     }
     console.log(edit);
     this.phone.updatePhone(this.id, edit).subscribe();
-    return this.router.navigate(['/admin/phone']);
+    this.oneGit();
+    
+    return this.router.navigate(['admin/phone']);
+    
   }
 }

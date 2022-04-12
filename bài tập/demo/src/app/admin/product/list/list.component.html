@@ -17,14 +17,14 @@
             <td>{{product.desc}}</td>
             <td>{{product.price}}</td>
             <td><img [src]="product.avartar" alt=""></td>
-            <td *ngIf="product.status=='1'">
+            <td>
                 <app-status [status]="product.status" (changeStatus)="parentChangeStatus($event, product)">
                 </app-status>
             </td>
-            <td *ngIf="product.status=='0'">
+            <!-- <td *ngIf="product.status=='0'">
                 <app-status [status]="product.status" (changeStatus)="parentChangeStatus($event, product)">
                 </app-status>
-            </td>
+            </td> -->
             <td>
                 <button (click)="del(product.id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                 <a routerLink="{{product.id}}/edit"><button class="btn btn-warning"><i

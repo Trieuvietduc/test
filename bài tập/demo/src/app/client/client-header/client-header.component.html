@@ -64,10 +64,13 @@
             alt="" width="50px">
         <a class="nav-link" href="">Giỏ Hàng</a>
     </div>
-    <nav class="navbar navbar-light bg-light">
-        <div class="search-box">
-            <button class="btn-search"><i class="fad fa-search"></i></button>
-            <input type="text" class="input-search" placeholder="Nhập để tìm kiếm...">
+    <nav class="">
+        <div class="search-box" >
+            <form action="">
+                <button class="btn-search" (click)="seacrh1(serach)"><i class="fad fa-search"></i></button>
+            <input type="text" name="serach" [(ngModel)]="serach" class="input-search" placeholder="Nhập để tìm kiếm...">
+            </form>
+            
         </div>
     </nav>
     <a class="nav-link dropdown" href="">LOGIN</a>|<a class="nav-link dropdown" href="">REGISTER</a>

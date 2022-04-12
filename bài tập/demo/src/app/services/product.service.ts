@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 const productApi = "http://localhost:3000/products";
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,7 @@ export class ProductService {
   getProducts() {
     return this.http.get(productApi);
   }
-  createProduct(data: { avartar: string, desc: string, name: string, price: number, status: number, thuong_hieu: string }) {
-    console.log(data);
+  createProduct(data: any) {
     return this.http.post(productApi, data);
   }
   deleteProduct(id: number) {
@@ -23,5 +23,13 @@ export class ProductService {
   }
   updatePhone(id: number, data: any) {
     return this.http.put(`${productApi}/${id}`, data);
+  }
+  // seacrh(seacrh: any){
+  //   console.log(seacrh);
+  //   return this.http.get(productApi + "?search=" + seacrh)
+  // }
+  seacrh(seacrh: any) {
+    console.log(seacrh);
+    return this.http.get(`${productApi}?search=${seacrh}`);
   }
 }
