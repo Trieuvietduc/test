@@ -2,6 +2,7 @@
     <!-- name -->
     <p *ngIf="formData?.errors?.['required']">{{name}} {{item}} {{desc}} không được để trống</p>
     <p *ngIf="formData?.errors?.['maxlength']">{{name}} {{item}} không được vượt quá 15 kí tự</p>
+    <p *ngIf="formData?.errors?.['minLength']">{{name}} {{item}} {{desc}} không được ít hơn 6 kí tự</p>
     <!-- <p *ngIf="formData?.errors?.['pattern']">{{name}} không được có khoảng trống</p> -->
     <!-- thương hiệu -->
 </div>

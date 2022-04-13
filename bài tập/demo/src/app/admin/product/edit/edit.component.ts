@@ -53,7 +53,9 @@ export class EditComponent implements OnInit {
   onUpdate(edit: any) {
     edit = {
       ...edit,
-      avartar: this.imageBase64
+      avartar: this.imageBase64,
+      status: Number(edit.status),
+      price: Number(edit.price)
     }
     console.log(edit);
     this.phone.updatePhone(this.id, edit).subscribe();

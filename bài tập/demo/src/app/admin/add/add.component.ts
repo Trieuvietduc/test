@@ -21,17 +21,20 @@ export class AddComponent implements OnInit {
         [
           Validators.required,
           Validators.maxLength(15),
+          Validators.minLength(6),
         ]
       ),
       thuong_hieu: new FormControl('',
         [
           Validators.required,
-          Validators.maxLength(15)
+          Validators.maxLength(15),
+          Validators.minLength(6),
         ]
       ),
       desc: new FormControl('',
         [
           Validators.required,
+          Validators.minLength(6),
         ]
       ),
       price: new FormControl('',
@@ -73,11 +76,14 @@ export class AddComponent implements OnInit {
     console.log(this.imageBase64);
     validateForm = {
       ...validateForm,
-      avartar: this.imageBase64
+      avartar: this.imageBase64,
+      status: Number(validateForm.status),
+      price: Number(validateForm.price),
     }
     console.log(validateForm);
     this.phone.createProduct(validateForm).subscribe(data => { });
-    this.router.navigate(['/admin/phone']);
     this.getlist();
+    this.router.navigate(['/admin/phone']);
+    
   }
 }

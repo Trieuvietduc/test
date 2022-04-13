@@ -29,6 +29,7 @@ import { ListComponent } from './admin/product/list/list.component';
 import { AddComponent } from './admin/add/add.component';
 import { StatusComponent } from './components/status/status.component';
 import { ValidateComponent } from './components/validate/validate.component';
+import { CartComponent } from './client/cart/cart.component';
 // đc cung cấp để tương tác vs angular
 // import {FormsModule} form '@angular/forms';
 
@@ -55,7 +56,8 @@ import { ValidateComponent } from './components/validate/validate.component';
     AddComponent,
     ListComponent,
     StatusComponent,
-    ValidateComponent
+    ValidateComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

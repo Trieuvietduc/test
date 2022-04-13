@@ -21,6 +21,10 @@ export class ProductService {
   firstPhone(id: number) {
     return this.http.get(`${productApi}/${id}`);
   }
+  firstPhone1(id: number) {
+    console.log(id);
+    return this.http.get(`${productApi}?${id}`);
+  }
   updatePhone(id: number, data: any) {
     return this.http.put(`${productApi}/${id}`, data);
   }

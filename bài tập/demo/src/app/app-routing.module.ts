@@ -6,6 +6,7 @@ import { EditComponent } from './admin/product/edit/edit.component';
 import { ListComponent } from './admin/product/list/list.component';
 import { ProductComponent } from './admin/product/product.component';
 import { UserComponent } from './admin/user/user.component';
+import { CartComponent } from './client/cart/cart.component';
 import { ClientProductComponent } from './client/client-product/client-product.component';
 import { DetailComponent } from './client/client-product/detail/detail.component';
 import { ClientComponent } from './client/client.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: '',
     component: ClientComponent,
+  },
+  {
+    path: 'phone/cart',
+    component: CartComponent,
   },
   {
     path: 'phone',
